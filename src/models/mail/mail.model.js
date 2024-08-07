@@ -13,6 +13,10 @@ const Mail = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     message: {
       type: DataTypes.TEXT,
       allowNull: false,
@@ -23,7 +27,7 @@ const Mail = db.define(
       defaultValue: false,
     },
     labels: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.JSON,
       allowNull: false,
     },
   },
